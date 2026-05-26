@@ -38,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -56,6 +57,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html[data-language="zh"] body {
@@ -1382,52 +1384,90 @@ html[data-language="zh"] .hero-support {
 
 @media (max-width: 620px) {
   .page-shell {
-    padding: 0 18px 48px;
+    padding: 0 18px 44px;
   }
 
   .section {
-    padding: 72px 0;
+    padding: 58px 0;
   }
 
   .site-header {
-    position: relative;
-    flex-direction: column;
+    position: sticky;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 8px 10px;
+    min-height: auto;
+    padding: 10px 0 8px;
+    background: linear-gradient(180deg, rgba(7, 8, 11, 0.96), rgba(7, 8, 11, 0.78));
   }
 
   .header-actions {
-    width: 100%;
-    flex-direction: column;
+    display: contents;
+  }
+
+  .brand {
+    order: 1;
+    min-height: 38px;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 12px;
   }
 
   .nav-links {
+    order: 3;
     width: 100%;
     max-width: none;
     justify-content: space-between;
+    padding: 3px;
+    border-radius: 8px;
+    background: rgba(7, 8, 11, 0.88);
   }
 
   .nav-links a {
     flex: 1;
     min-width: 0;
-    font-size: 12.5px;
+    min-height: 34px;
+    font-size: 12px;
   }
 
   .language-switch {
-    width: 100%;
+    order: 2;
+    width: auto;
+    min-height: 38px;
+    margin-left: auto;
+    padding: 3px;
   }
 
   .language-option {
-    flex: 1;
+    min-width: 42px;
+    min-height: 30px;
+    padding: 0 10px;
+  }
+
+  .hero {
+    gap: 28px;
+    padding-top: 34px;
+    padding-bottom: 54px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    font-size: 11px;
   }
 
   h1 {
     max-width: 100%;
-    font-size: 36px;
-    line-height: 1.08;
+    font-size: 34px;
+    line-height: 1.06;
   }
 
   h2 {
-    font-size: 27px;
-    line-height: 1.16;
+    font-size: 25px;
+    line-height: 1.15;
   }
 
   h3 {
@@ -1437,16 +1477,22 @@ html[data-language="zh"] .hero-support {
   .hero-lede,
   .hero-support {
     max-width: 100%;
-    font-size: 16px;
-    line-height: 1.68;
+    margin-top: 18px;
+    font-size: 15.5px;
+    line-height: 1.62;
+  }
+
+  .hero-support {
+    margin-top: 10px;
+    font-size: 15px;
   }
 
   html[data-language="zh"] h1 {
-    line-height: 1.18;
+    line-height: 1.15;
   }
 
   html[data-language="zh"] h2 {
-    line-height: 1.22;
+    line-height: 1.2;
   }
 
   html[data-language="zh"] .hero-lede,
@@ -1459,16 +1505,40 @@ html[data-language="zh"] .hero-support {
   html[data-language="zh"] .project-item p,
   html[data-language="zh"] .looking-panel p,
   html[data-language="zh"] .contact-section p {
-    line-height: 1.78;
+    line-height: 1.72;
   }
 
   .hero-actions {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 24px;
   }
 
   .button {
     width: 100%;
+    min-height: 44px;
+    padding: 0 14px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .hero-visual {
+    justify-items: start;
+    padding-top: 0;
+  }
+
+  .avatar-card {
+    width: 210px;
+    max-width: 72%;
+  }
+
+  .avatar-core {
+    border-radius: 16px;
+  }
+
+  .avatar-core span {
+    font-size: 34px;
   }
 
   .map-grid,
@@ -1478,26 +1548,77 @@ html[data-language="zh"] .hero-support {
   }
 
   .section-intro {
-    font-size: 16px;
+    margin-top: 14px;
+    font-size: 15.5px;
+    line-height: 1.62;
+  }
+
+  .section-heading.wide {
+    margin-bottom: 24px;
+  }
+
+  #now,
+  #lab,
+  #ideas,
+  #projects,
+  #looking,
+  #reading,
+  #links {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  #map {
+    padding-top: 62px;
+    padding-bottom: 56px;
+  }
+
+  .split-section,
+  .contact-section,
+  .operating-map {
+    gap: 24px;
+  }
+
+  .now-panel p,
+  .reading-panel li,
+  .idea-list p,
+  .topic-card p,
+  .lab-card p,
+  .project-item p,
+  .looking-panel p,
+  .contact-section p {
+    font-size: 15px;
+    line-height: 1.62;
   }
 
   .globe-panel {
-    min-height: 430px;
-    padding: 18px;
+    min-height: 360px;
+    padding: 14px;
   }
 
   .globe-shell {
-    width: min(100%, 390px);
+    width: min(100%, 330px);
   }
 
   .globe {
-    width: 76%;
+    width: 74%;
+  }
+
+  .orbit-ring {
+    inset: 3%;
+  }
+
+  .orbit-ring-two {
+    inset: 11%;
   }
 
   .marker-label {
-    min-height: 24px;
-    padding: 0 8px;
-    font-size: 11px;
+    min-height: 22px;
+    max-width: 120px;
+    padding: 0 7px;
+    overflow: hidden;
+    font-size: 10.5px;
+    text-overflow: ellipsis;
   }
 
   .marker-card {
@@ -1505,31 +1626,42 @@ html[data-language="zh"] .hero-support {
   }
 
   .map-marker::before {
-    width: 50px;
+    width: 42px;
   }
 
   .globe-detail {
-    padding: 24px;
+    padding: 22px;
   }
 
   .globe-detail h3 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .globe-detail p {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.62;
   }
 
   .map-tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin-inline: -18px;
+    padding: 0 18px 4px;
+    overflow-x: auto;
+    scroll-padding-inline: 18px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
   }
 
   .map-tab {
-    width: 100%;
+    flex: 0 0 auto;
     min-width: 0;
-    padding: 0 10px;
-    font-size: 12.5px;
+    min-height: 36px;
+    padding: 0 13px;
+    scroll-snap-align: start;
+    font-size: 12px;
+    white-space: nowrap;
   }
 
   .topic-card,
@@ -1538,16 +1670,83 @@ html[data-language="zh"] .hero-support {
   .idea-list article,
   .contact-links a {
     min-height: auto;
-    padding: 22px;
+    padding: 20px;
   }
 
-  .topic-card span {
-    margin-bottom: 28px;
+  .topic-card span,
+  .lab-card span,
+  .project-item span,
+  .idea-list span,
+  .contact-links span {
+    margin-bottom: 14px;
   }
 
   .now-panel,
   .reading-panel,
   .looking-panel {
-    padding: 24px;
+    padding: 22px;
+  }
+
+  .card-tags {
+    gap: 7px;
+    margin-top: 16px;
+  }
+
+  .project-item .card-tags span {
+    min-height: 28px;
+    padding: 0 9px;
+    font-size: 11.5px;
+  }
+
+  .looking-list {
+    gap: 14px;
+  }
+
+  .looking-list li {
+    padding-bottom: 14px;
+  }
+
+  .contact-section {
+    padding-bottom: 18px;
+  }
+
+  .contact-links {
+    gap: 12px;
+  }
+
+  .contact-links a {
+    min-height: 104px;
+  }
+
+  .contact-links strong {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-shell {
+    padding-inline: 14px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .map-tabs {
+    margin-inline: -14px;
+    padding-inline: 14px;
+    scroll-padding-inline: 14px;
+  }
+
+  .globe-panel {
+    min-height: 330px;
+  }
+
+  .globe-shell {
+    width: min(100%, 300px);
   }
 }
