@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="JDD Space is a semi-public personal lab for AI, money, media, long-term value, and early startup experiments."
+      content="JDD Space is a personal operating system for AI, money movement, media, long-term value, Valuecourt, and VerdictX."
     />
     <meta name="google" content="notranslate" />
-    <title>JDD Space | Personal Lab</title>
+    <title>JDD Space | Personal Operating System</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="ambient-flow" aria-hidden="true">
+      <span class="flow-streak flow-streak-blue"></span>
+      <span class="flow-streak flow-streak-green"></span>
+      <span class="flow-streak flow-streak-gold"></span>
+      <span class="flow-streak flow-streak-soft"></span>
+      <span class="flow-streak flow-streak-blue slow"></span>
+      <span class="flow-streak flow-streak-green slow"></span>
+    </div>
+
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="JDD home">
@@ -21,6 +30,7 @@
           <nav class="nav-links" aria-label="Primary navigation">
             <a href="#now" data-i18n="nav.now">Now</a>
             <a href="#map" data-i18n="nav.map">Map</a>
+            <a href="#projects" data-i18n="nav.projects">Projects</a>
             <a href="#ideas" data-i18n="nav.ideas">Ideas</a>
             <a href="#links" data-i18n="nav.links">Links</a>
           </nav>
@@ -38,31 +48,80 @@
       <main id="top">
         <section class="hero section reveal">
           <div class="hero-copy">
-            <p class="eyebrow" data-i18n="hero.eyebrow">JDD Space / Semi-public personal lab</p>
-            <h1 data-i18n="hero.title">A personal lab for AI, money, media, and long-term value.</h1>
+            <p class="eyebrow" data-i18n="hero.eyebrow">01 / Personal operating system</p>
+            <h1 data-i18n="hero.title">JDD Space</h1>
             <p class="hero-lede" data-i18n="hero.lede">
-              I use vibe coding, research, and media to explore AI products, stablecoin payments, value investing, personal IP, and early startup ideas.
+              A personal operating system for AI, money movement, media, and long-term value.
             </p>
             <p class="hero-support" data-i18n="hero.support">
-              A semi-public space for turning curiosity into prototypes, notes, public learning, and opportunity flow.
+              I use vibe coding, research, and media to turn curiosity into prototypes, public notes, investment judgment, and early startup opportunities.
             </p>
-            <div class="hero-actions" aria-label="Contact links">
-              <a class="button primary" href="#links" data-i18n="hero.primaryAction">Connect</a>
+            <div class="hero-build-strip">
+              <span class="build-pulse" aria-hidden="true"></span>
+              <div>
+                <span data-i18n="hero.buildLabel">Now building</span>
+                <strong data-i18n="hero.buildTitle">Valuecourt</strong>
+                <p data-i18n="hero.buildBody">
+                  A media-native value investing research system for business model notes, long-term judgment, and public learning.
+                </p>
+              </div>
+            </div>
+            <div class="hero-actions" aria-label="Primary links">
+              <a class="button primary" href="#projects" data-i18n="hero.primaryAction">View Current Build</a>
               <a class="button secondary" href="#map" data-i18n="hero.secondaryAction">Explore Map</a>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="Abstract JDD avatar">
-            <div class="avatar-card">
-              <div class="avatar-grid"></div>
-              <div class="avatar-orbit orbit-one"></div>
-              <div class="avatar-orbit orbit-two"></div>
-              <div class="avatar-core">
-                <span>JDD</span>
+          <div class="hero-visual" aria-label="JDD operating console">
+            <div class="operating-console">
+              <div class="console-topline">
+                <div class="console-dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span data-i18n="hero.consoleStatus">JDD OS / live lab</span>
               </div>
-              <div class="signal signal-blue"></div>
-              <div class="signal signal-green"></div>
-              <div class="signal signal-gold"></div>
+              <div class="console-identity">
+                <div class="jdd-mark" aria-hidden="true">
+                  <span>JDD</span>
+                </div>
+                <div>
+                  <span data-i18n="hero.consoleKicker">Personal operating system</span>
+                  <strong data-i18n="hero.consoleTitle">Research -> Prototype -> Distribution</strong>
+                </div>
+              </div>
+              <div class="console-build">
+                <span data-i18n="hero.consoleBuildLabel">Current build</span>
+                <strong data-i18n="hero.consoleBuildTitle">Valuecourt</strong>
+                <p data-i18n="hero.consoleBuildBody">Business model breakdowns, value notes, and long-term judgment training.</p>
+              </div>
+              <div class="console-focus" aria-label="Focus areas">
+                <span data-i18n="hero.node.ai">AI</span>
+                <span data-i18n="hero.node.payments">Payments</span>
+                <span data-i18n="hero.node.media">Media</span>
+                <span data-i18n="hero.node.value">Value</span>
+                <span data-i18n="hero.node.startup">Startup</span>
+              </div>
+              <div class="console-flow" aria-hidden="true">
+                <div class="flow-step is-active">
+                  <span>01</span>
+                  <i></i>
+                </div>
+                <div class="flow-step">
+                  <span>02</span>
+                  <i></i>
+                </div>
+                <div class="flow-step">
+                  <span>03</span>
+                  <i></i>
+                </div>
+              </div>
+              <div class="console-footer">
+                <span data-i18n="hero.consoleMode">Mode: learning in public</span>
+                <span data-i18n="hero.consoleRecent">Recent field build: VerdictX / ETHBeijing 2026</span>
+                <span data-i18n="hero.consoleSignal">Signal: opportunity flow</span>
+              </div>
             </div>
           </div>
         </section>
@@ -215,11 +274,20 @@
                         <span data-i18n="map.detail.valuecourt.body">The first public build: a media-native value investing website for research notes, business model breakdowns, and long-term judgment.</span>
                       </span>
                     </button>
+                    <button class="map-marker marker-verdictx" type="button" data-topic="verdictx">
+                      <span class="marker-dot"></span>
+                      <span class="marker-label" data-i18n="map.verdictx.title">VerdictX</span>
+                      <span class="marker-card">
+                        <span class="marker-card-kicker" data-i18n="map.detail.verdictx.kicker">06 / Field build</span>
+                        <strong data-i18n="map.detail.verdictx.title">VerdictX</strong>
+                        <span data-i18n="map.detail.verdictx.body">VerdictX connects AI agents, contract risk, liquidity, price structure, social heat, and order size into an evidence-backed pre-buy verdict for onchain traders.</span>
+                      </span>
+                    </button>
                     <button class="map-marker marker-investing" type="button" data-topic="investing">
                       <span class="marker-dot"></span>
                       <span class="marker-label" data-i18n="map.investing.title">Value Investing</span>
                       <span class="marker-card">
-                        <span class="marker-card-kicker" data-i18n="map.detail.investing.kicker">06 / Judgment</span>
+                        <span class="marker-card-kicker" data-i18n="map.detail.investing.kicker">07 / Judgment</span>
                         <strong data-i18n="map.detail.investing.title">Value Investing</strong>
                         <span data-i18n="map.detail.investing.body">Value investing is the judgment layer: long-term thinking, business models, cash flow, moats, and the discipline to avoid noise.</span>
                       </span>
@@ -228,7 +296,7 @@
                       <span class="marker-dot"></span>
                       <span class="marker-label" data-i18n="map.startup.title">Startup Ideas</span>
                       <span class="marker-card">
-                        <span class="marker-card-kicker" data-i18n="map.detail.startup.kicker">07 / Company creation</span>
+                        <span class="marker-card-kicker" data-i18n="map.detail.startup.kicker">08 / Company creation</span>
                         <strong data-i18n="map.detail.startup.title">Startup Ideas</strong>
                         <span data-i18n="map.detail.startup.body">Startup ideas connect the map back to action: find a problem, form a thesis, build a small test, and learn from real feedback.</span>
                       </span>
@@ -259,8 +327,105 @@
             <button class="map-tab" type="button" data-topic="stablecoin" data-i18n="map.stablecoin.title">Stablecoin Payments</button>
             <button class="map-tab" type="button" data-topic="media" data-i18n="map.media.title">Media IP</button>
             <button class="map-tab is-active" type="button" data-topic="valuecourt" data-i18n="map.valuecourt.title">Valuecourt</button>
+            <button class="map-tab" type="button" data-topic="verdictx" data-i18n="map.verdictx.title">VerdictX</button>
             <button class="map-tab" type="button" data-topic="investing" data-i18n="map.investing.title">Value Investing</button>
             <button class="map-tab" type="button" data-topic="startup" data-i18n="map.startup.title">Startup Ideas</button>
+          </div>
+        </section>
+
+        <section id="projects" class="section reveal">
+          <div class="section-heading wide">
+            <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
+            <h2 data-i18n="projects.title">Long-term thesis, recent field builds.</h2>
+            <p class="section-intro" data-i18n="projects.support">
+              Valuecourt is the long-term research system. VerdictX is the ETHBeijing 2026 hackathon build.
+            </p>
+          </div>
+          <div class="project-strip">
+            <article class="project-item project-feature">
+              <div class="project-feature-copy">
+                <span data-i18n="projects.statusActive">Active build in progress</span>
+                <h3 data-i18n="projects.valuecourt.title">Valuecourt</h3>
+                <p data-i18n="projects.valuecourt.body">A media-native value investing research system under construction, focused on business model breakdowns, research notes, and long-term judgment training.</p>
+                <div class="card-tags" aria-label="Valuecourt status">
+                  <span data-i18n="projects.valuecourt.tag1">Active build log</span>
+                  <span data-i18n="projects.valuecourt.tag2">Early feedback wanted</span>
+                  <span data-i18n="projects.valuecourt.tag3">Value research system</span>
+                </div>
+              </div>
+              <div class="valuecourt-visual" aria-hidden="true">
+                <div class="memo-window">
+                  <div class="memo-topbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="memo-header">
+                    <span data-i18n="projects.valuecourt.visualKicker">Research memo</span>
+                    <strong data-i18n="projects.valuecourt.visualTitle">Business quality map</strong>
+                  </div>
+                  <div class="memo-lines">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                  <div class="quality-map">
+                    <div class="quality-node node-business" data-i18n="projects.valuecourt.node1">Business</div>
+                    <div class="quality-node node-moat" data-i18n="projects.valuecourt.node2">Moat</div>
+                    <div class="quality-node node-cash" data-i18n="projects.valuecourt.node3">Cash Flow</div>
+                    <div class="quality-node node-risk" data-i18n="projects.valuecourt.node4">Risk</div>
+                    <div class="quality-link link-one"></div>
+                    <div class="quality-link link-two"></div>
+                    <div class="quality-link link-three"></div>
+                  </div>
+                  <div class="memo-stats">
+                    <span data-i18n="projects.valuecourt.stat1">Research notes</span>
+                    <span data-i18n="projects.valuecourt.stat2">Model breakdowns</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="project-item verdictx-card">
+              <span data-i18n="projects.verdictx.status">ETHBeijing 2026 Hackathon Build</span>
+              <h3 data-i18n="projects.verdictx.title">VerdictX</h3>
+              <p data-i18n="projects.verdictx.body">An AI pre-buy risk verdict engine for onchain traders, combining contract security, liquidity, price structure, social heat, and order size into evidence-backed buy / caution / avoid decisions.</p>
+              <p class="project-role" data-i18n="projects.verdictx.role">Built the MVP product and technical core: scoring rules, four-agent pipeline, GoPlus / DexScreener / xAPI, FastAPI, demo UI, Evidence Cards, AI Summary / Q&A, and safety boundaries.</p>
+              <div class="verdict-panel" aria-hidden="true">
+                <div>
+                  <span data-i18n="projects.verdictx.signal1">Contract</span>
+                  <strong data-i18n="projects.verdictx.signal1Value">GoPlus</strong>
+                </div>
+                <div>
+                  <span data-i18n="projects.verdictx.signal2">Liquidity</span>
+                  <strong data-i18n="projects.verdictx.signal2Value">DexScreener</strong>
+                </div>
+                <div>
+                  <span data-i18n="projects.verdictx.signal3">Social</span>
+                  <strong data-i18n="projects.verdictx.signal3Value">xAPI</strong>
+                </div>
+                <div>
+                  <span data-i18n="projects.verdictx.signal4">Verdict</span>
+                  <strong data-i18n="projects.verdictx.signal4Value">Risk</strong>
+                </div>
+              </div>
+              <a class="project-link" href="https://github.com/zyrsjdd-star/VerdictX" target="_blank" rel="noreferrer" data-i18n="projects.verdictx.link">GitHub</a>
+            </article>
+            <article class="project-item">
+              <span data-i18n="projects.statusPreparing">Distribution layer</span>
+              <h3 data-i18n="projects.media.title">Media System</h3>
+              <p data-i18n="projects.media.body">A lightweight bilingual content system across X, short-form video, podcasts, and Chinese platforms, starting small before scaling into a larger content operation.</p>
+              <div class="card-tags" aria-label="Media system channels">
+                <span data-i18n="projects.media.tag1">X-first</span>
+                <span data-i18n="projects.media.tag2">Short video</span>
+                <span data-i18n="projects.media.tag3">Podcast-ready</span>
+                <span data-i18n="projects.media.tag4">Chinese platforms</span>
+              </div>
+            </article>
+            <article class="project-item">
+              <span data-i18n="projects.status">Queued experiment</span>
+              <h3 data-i18n="projects.experiments.title">AI / Payment Experiments</h3>
+              <p data-i18n="projects.experiments.body">Lightweight AI tools, automation workflows, stablecoin payment rails, and fintech product observations queued for small tests.</p>
+            </article>
           </div>
         </section>
 
@@ -290,46 +455,6 @@
               <h3 data-i18n="ideas.founder.title">Idea validation, product thinking, and startup reflections.</h3>
               <p data-i18n="ideas.founder.body">Breaking startup ideas into smaller experiments, then reviewing judgment and execution.</p>
             </article>
-          </div>
-        </section>
-
-        <section id="projects" class="section reveal">
-          <div class="section-heading wide">
-            <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
-            <h2 data-i18n="projects.title">Valuecourt is the first public build in this media-native system.</h2>
-          </div>
-          <div class="project-strip">
-            <div class="project-item">
-              <span data-i18n="projects.statusActive">Current public build</span>
-              <h3 data-i18n="projects.valuecourt.title">Valuecourt</h3>
-              <p data-i18n="projects.valuecourt.body">A media-native value investing website preparing for public release, focused on research notes, business model breakdowns, and long-term judgment training.</p>
-              <div class="card-tags" aria-label="Valuecourt status">
-                <span data-i18n="projects.valuecourt.tag1">Preparing public release</span>
-                <span data-i18n="projects.valuecourt.tag2">Looking for feedback</span>
-                <span data-i18n="projects.valuecourt.tag3">Value investing media</span>
-              </div>
-            </div>
-            <div class="project-item">
-              <span data-i18n="projects.statusPreparing">Preparing</span>
-              <h3 data-i18n="projects.media.title">Media System</h3>
-              <p data-i18n="projects.media.body">A lightweight bilingual content system across X, short-form video, podcasts, and Chinese platforms, starting small before scaling into a larger content operation.</p>
-              <div class="card-tags" aria-label="Media system channels">
-                <span data-i18n="projects.media.tag1">X-first</span>
-                <span data-i18n="projects.media.tag2">Short video</span>
-                <span data-i18n="projects.media.tag3">Podcast-ready</span>
-                <span data-i18n="projects.media.tag4">Chinese platforms</span>
-              </div>
-            </div>
-            <div class="project-item">
-              <span data-i18n="projects.status">Coming soon</span>
-              <h3 data-i18n="projects.ai.title">Small AI Tools</h3>
-              <p data-i18n="projects.ai.body">Lightweight tools, automation workflows, and prototype experiments.</p>
-            </div>
-            <div class="project-item">
-              <span data-i18n="projects.status">Coming soon</span>
-              <h3 data-i18n="projects.payment.title">Payment Experiments</h3>
-              <p data-i18n="projects.payment.body">Stablecoin payments, settlement experiences, and fintech product observations.</p>
-            </div>
           </div>
         </section>
 
